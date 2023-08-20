@@ -1,0 +1,42 @@
+.feed{
+    flex: 0.6;
+    margin: 0 20px; /* 0 top and bottom, 20px left and right */
+}
+
+.feed__inputContainer{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.feed__input{
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 15px;
+    color: gray;
+    display: flex;
+}
+
+.feed__input > form{ /* > means direct child */
+    display: flex;
+    width: 100%; /* take up all the space */
+}
+
+.feed__input > form > input{
+    border: none; /* remove the border */
+    margin-left: 10px;
+    outline-width: 0; /* this is to remove the default outline when clicked */
+    flex: 1; /* take up all the space */
+    font-weight: 600; 
+}
+
+.feed__input > form > button{
+    display: none; /* hide the button */ 
+}
+
+.feed__inputOptions{
+    display: flex; /* make the options appear in a row */
+    justify-content: space-evenly; /* make the options evenly spaced */
+}
