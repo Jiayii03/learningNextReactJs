@@ -7,6 +7,7 @@ import {
   SettingsOutlined,
   ArrowDropDownOutlined,
   DarkMode,
+  WidthFull,
 } from "@mui/icons-material";
 import FlexBetween from "components/FlexBetween";
 import { setMode } from "state";
@@ -20,7 +21,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
@@ -36,7 +37,7 @@ const Navbar = () => {
         {/* LEFT SIDE */}
         <FlexBetween>
           {/* Icon buttons are commonly found in app bars and toolbars. */}
-          <IconButton onClick={() => console.log("open/close sidebar")}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
