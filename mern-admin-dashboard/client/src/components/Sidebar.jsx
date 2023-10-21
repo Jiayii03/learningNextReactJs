@@ -11,6 +11,7 @@ import {
   ListItemText,
   Typography,
   useTheme,
+  useMediaQuery
 } from "@mui/material";
 import {
   SettingsOutlined,
@@ -88,6 +89,7 @@ const navItems = [
 ];
 
 function Sidebar({
+  user,
   drawerWidth,
   isSidebarOpen,
   setIsSidebarOpen,
@@ -97,6 +99,7 @@ function Sidebar({
   const [active, setActive] = useState(""); // determine what page we're currently at
   const navigate = useNavigate();
   const theme = useTheme();
+  const isNonOverflow = useMediaQuery("(min-height: 784px)");
 
   // everytime when pathname changes, update the active state
   useEffect(() => {
@@ -189,6 +192,41 @@ function Sidebar({
                 );
               })}
             </List>
+          </Box>
+
+          <Box position={isNonOverflow ? "absolute" : "sticky"} bottom="2rem">
+            <Divider />{" "}
+            {/* a thin transparent line to divide between sections */}
+            <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3em">
+              <Box
+                component="img"
+                alt="profile"
+                src={profileImage}
+                height="40px"
+                width="40px"
+                borderRadius="50%" /* making it into a circle */
+                sx={{ objectFit: "cover" }}
+              />
+              <Box textAlign="left">
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.9rem"
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontWeight="bold"
+                  fontSize="0.8rem"
+                  sx={{ color: theme.palette.secondary[200] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
+            </FlexBetween>
           </Box>
         </Drawer>
       )}

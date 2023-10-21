@@ -1,4 +1,10 @@
+## Overview
+
+![Admin dashboard preview](https://cdn.discordapp.com/attachments/1156979128948510793/1163159541387644928/image.png?ex=653e8fbd&is=652c1abd&hm=1b3cf4302e321146fca4d9bfefad79b8dd8549741748e77c7369de4f8b027dc9&)
+
 ## Quickstart
+
+Start server and client. Anything needs to be fetched from the back-end, server must be running.
 
 ### Server
 
@@ -16,6 +22,8 @@ npx create-react-app client
 cd client
 npm i react-redux @reduxjs/toolkit react-datepicker react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid  @nivo/core @nivo/bar @nivo/pie
 ```
+
+## Frontend
 
 ### How to use Tailwind Shades?
 
@@ -76,19 +84,52 @@ const Layout = () => {
 
 export default Layout;
 ```
-The Layout component has <Outlet> and <Link> elements.
+The Layout component has `<Outlet>` and `<Link>` elements.
 
-The <Outlet> renders the current route selected.
+The `<Outlet>` renders the current route selected.
 
-<Link> is used to set the URL and keep track of browsing history.
+`<Link>` is used to set the URL and keep track of browsing history.
 
-Anytime we link to an internal path, we will use <Link> instead of <a href="">.
+Anytime we link to an internal path, we will use `<Link>` instead of `<a href="">`.
 
 The "layout route" is a shared component that inserts common content on all pages, such as a navigation menu.
 
 ### Material UI - React UI Library
 
-This project mainly depends on Material UI for the UI components. Look up the documentation for more details.
+This project mainly depends on Material UI for the UI components. Look up the documentation to know more details about each component.
+
+### MUI List
+
+```js
+<List>
+  <ListItem disablePadding>
+    <ListItemButton>
+      <ListItemIcon>
+        <InboxIcon />
+      </ListItemIcon>
+      <ListItemText primary="Inbox" />
+    </ListItemButton>
+  </ListItem>
+</List>
+```
+
+## Backend
+
+### MongoDB Atlas
+
+Link: https://cloud.mongodb.com/v2/6527f9399ee1562070202d38#/clusters
+
+### Redux Toolkit Query
+
+- createSlice() / createApi()
+- useGetQueryState()
+- api.reducer
+- configureStore()
+- Provider store={store}
+
+### Remark
+
+1. We're not implementing a login authentication system in this project. We're just assuming that the user is already logged in.
 
 ### References
 
@@ -98,3 +139,6 @@ This project mainly depends on Material UI for the UI components. Look up the do
 - https://www.w3schools.com/react/react_router.asp
 - https://mui.com/material-ui/react-button/
 - https://mui.com/material-ui/material-icons/?theme=Outlined&query=settings
+- https://mui.com/material-ui/react-list/
+- https://mui.com/material-ui/react-drawer/
+- https://mui.com/material-ui/react-menu/

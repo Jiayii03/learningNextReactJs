@@ -14,7 +14,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <CssBaseline />
+          <CssBaseline /> {/* CssBaseline is used to reset the default browser styling */}
           <Routes>
             {/* Any route within <Route></Route> will have the <Layout/> component as the parent */}
             <Route element={<Layout />}>
