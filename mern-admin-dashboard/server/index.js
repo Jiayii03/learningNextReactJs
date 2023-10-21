@@ -9,6 +9,7 @@ import clientRoutes from './routes/client.js'
 import generalRoutes from './routes/general.js'
 import managementRoutes from './routes/management.js'
 import salesRoutes from './routes/sales.js'
+import connectDB from './connectMongoDb.js';
 
 // data imports
 import User from "./models/User.js";
@@ -33,7 +34,6 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
-const connectDB = require('./connectMongo')
 const PORT = process.env.PORT || 9000;
 
 connectDB()
