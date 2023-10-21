@@ -1,6 +1,10 @@
 ## Overview
 
+Link to Youtube Tutorial: https://youtu.be/0cPCMIuDk2I?si=IY1MHTJdd6pPKxDd
+
 ![Admin dashboard preview](https://cdn.discordapp.com/attachments/1156979128948510793/1163159541387644928/image.png?ex=653e8fbd&is=652c1abd&hm=1b3cf4302e321146fca4d9bfefad79b8dd8549741748e77c7369de4f8b027dc9&)
+
+![ERD for Data Modelling](https://cdn.discordapp.com/attachments/1121645491319484448/1165384212644384778/image.png?ex=6546a7a0&is=653432a0&hm=2e7d4f7aa1e80b3dd5b616c0005da2366516e55313eb8e1aa5313cb12036c00f&)
 
 ## Quickstart
 
@@ -118,6 +122,8 @@ This project mainly depends on Material UI for the UI components. Look up the do
 ### MongoDB Atlas
 
 Link: https://cloud.mongodb.com/v2/6527f9399ee1562070202d38#/clusters
+
+We're working on MongoDB database which essentially is a NoSQL. However, we're using Mongoose to model the data in a relational way. So that there exists a relationship between the collections.
 
 ### Redux Toolkit Query
 

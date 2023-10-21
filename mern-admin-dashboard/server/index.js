@@ -39,6 +39,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
 }).then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
+    console.log("Listening on port " + PORT + "...")
 
     // inserting mock user data into MongoDB, ONLY ADD DATA ONE TIME
     // User.insertMany(dataUser)
