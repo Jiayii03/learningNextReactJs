@@ -33,16 +33,11 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
+const connectDB = require('./connectMongo')
 const PORT = process.env.PORT || 9000;
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
-    app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
-    console.log("Listening on port " + PORT + "...")
 
-    // inserting mock user data into MongoDB, ONLY ADD DATA ONE TIME
-    // User.insertMany(dataUser)
-}).catch((error) => {
-    console.log(`Did not connect: ${error}`)
+connectDB()
+
+app.listen(PORT, () => {
+    console.log("Server is running on port " + PORT)
 })
