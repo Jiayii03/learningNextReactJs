@@ -1,5 +1,8 @@
 ## Overview
 
+Deployment Link: 
+- https://admin-dashboard-client-rn7k.onrender.com/dashboard (frontend)
+- https://admin-dashboard-server-ui81.onrender.com/ (backend)
 Link to Youtube Tutorial: https://youtu.be/0cPCMIuDk2I?si=IY1MHTJdd6pPKxDd
 
 ![Admin dashboard preview](https://cdn.discordapp.com/attachments/1156979128948510793/1163159541387644928/image.png?ex=653e8fbd&is=652c1abd&hm=1b3cf4302e321146fca4d9bfefad79b8dd8549741748e77c7369de4f8b027dc9&)
@@ -132,6 +135,16 @@ We're working on MongoDB database which essentially is a NoSQL. However, we're u
 - api.reducer
 - configureStore()
 - Provider store={store}
+
+### Deployment
+
+![Deployment](https://cdn.discordapp.com/attachments/1124938936414904441/1165430383312117760/image.png?ex=6546d2a0&is=65345da0&hm=f87cf03801a41c03040a17c675191ee0fe62c0b7229f55dba9292f5809141127&)
+
+We're deploying the application on Render.com. Source: https://dashboard.render.com/
+
+- To deploy backend: Choose `Web Service`
+- To deploy frontend: Choose `Static Site`
+* When deploying frontend, make sure you change the REACT_APP_BASE_URL=`<the backend domain from render.com>`
 
 ### Remark
 
